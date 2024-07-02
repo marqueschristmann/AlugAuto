@@ -24,39 +24,72 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+# AlugAuto
 
-## Installation
+Este projeto é uma API para um sistema de aluguéis de carros, desenvolvida usando NestJS e seguindo a metodologia de Test-Driven Development (TDD).
+
+## Tecnologias Utilizadas
+
+- [NestJS](https://nestjs.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Jest](https://jestjs.io/) - Framework de testes
+- [TypeORM](https://typeorm.io/) - ORM para interagir com o banco de dados
+- [PostgreSQL](https://www.postgresql.org/) - Banco de dados relacional
+
+## Funcionalidades
+
+- **Carros**: CRUD (Create, Read, Update, Delete) de carros disponíveis para aluguel.
+- **Clientes**: CRUD de clientes.
+- **Aluguéis**: CRUD de aluguéis, permitindo a associação de carros com clientes.
+
+## Instalação
+
+1. Clone o repositório:
+
+    ```bash
+    git clone https://github.com/seu-usuario/alugauto.git
+    ```
+
+2. Navegue até o diretório do projeto:
+
+    ```bash
+    cd alugauto
+    ```
+
+3. Instale as dependências:
+
+    ```bash
+    npm install
+    ```
+
+4. Configure as variáveis de ambiente no arquivo `.env`:
+
+    ```env
+    DATABASE_HOST=localhost
+    DATABASE_PORT=5432
+    DATABASE_USER=seu-usuario
+    DATABASE_PASSWORD=sua-senha
+    DATABASE_NAME=nome-do-banco
+    ```
+
+5. Rode as migrações para configurar o banco de dados:
+
+    ```bash
+    npm run typeorm migration:run
+    ```
+
+6. Inicie o servidor de desenvolvimento:
+
+    ```bash
+    npm run start:dev
+    ```
+
+## Testes
+
+Para rodar os testes, utilize o comando:
 
 ```bash
-$ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
+npm run test
 
 ## Support
 
